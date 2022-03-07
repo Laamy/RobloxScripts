@@ -7,6 +7,10 @@ local moduleTable = {
 --local characterModel = ws[username]
 --ws["SnowClan_8342"].Sword.Handle
 
+function equipSword()
+	moduleTable["Players"][plrName].Backpack[moduleTable["SwordName"]].Parent = moduleTable["Workspace"][plrName]
+end
+
 function moduleTable.setSwordName(name)
 	moduleTable["SwordName"] = name
 end
