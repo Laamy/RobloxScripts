@@ -41,7 +41,7 @@ function moduleTable.KillPlayer(username)
 	local thread = coroutine.create(function()
 		while moduleTable["Workspace"][username]["Humanoid"].Health ~= 0 do
 			moduleTable.AttackPlayer(username)
-			wait(0.25)
+			wait()
 		end
 	end)
 	coroutine.resume(thread) -- this is around 3 times faster then wrapping a thread
