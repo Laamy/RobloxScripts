@@ -13,7 +13,7 @@ function AIModule:StartAI(character, part, dbs)
 end
 
 function AIModule:Follow(character, part, dbs)
-	pcall(function()
+	--pcall(function()
 		local canContinue = true
 		while canContinue == true and not __endScriptB do wait(0.1)
 			local path = pf:CreatePath()
@@ -56,7 +56,7 @@ function AIModule:Follow(character, part, dbs)
 				character.Humanoid.MoveToFinished:Wait()
 			end
 		end
-	end)
+	--end)
 end
 
 return AIModule
