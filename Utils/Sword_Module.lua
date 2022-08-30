@@ -54,4 +54,13 @@ function moduleTable.KillAll()
 	end
 end
 
+function moduleTable.KillOthers()
+	for i,v in ipairs(moduleTable["Players"]:GetChildren()) do
+		if v ~= moduleTable["Players"].LocalPlayer then
+			local plr = v.Character
+			moduleTable.KillPlayer(plr.Name)
+		end
+	end
+end
+
 return moduleTable
