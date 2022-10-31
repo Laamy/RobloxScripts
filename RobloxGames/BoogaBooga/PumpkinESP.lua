@@ -1,11 +1,9 @@
 local Pumpkins = game.Workspace.Pumpkins -- should work in void & overworld (THIS IS MOSTLY UNTESTED CUZ I DONT WANNA GET BANNED BUT STILL WANTED TO MAKE THIS)
 
-local localPlayer=game.Players.LocalPlayer
-
-function highlightModel(objObject)
-	local espbox=Instance.new('BoxHandleAdornment',objObject)
-	espbox.Adornee = objObject
-	espbox.Size = objObject.Size
+function initEspBox(obj)
+	local espbox = Instance.new('BoxHandleAdornment',obj)
+	espbox.Adornee = obj
+	espbox.Size = obj.Size
 	espbox.Color3 = Color3.new(1,0,0)
 	espbox.Transparency = .5
 	espbox.ZIndex = 1
@@ -14,6 +12,6 @@ end
 
 for _,v in ipairs(Pumpkins:GetChildren()) do
 	pcall(function()
-		highlightModel(v.Reference)
+		initEspBox(v.Reference)
 	end)
 end
