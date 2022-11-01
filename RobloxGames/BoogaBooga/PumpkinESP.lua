@@ -1,4 +1,4 @@
-local Pumpkins = game.Workspace.Pumpkins -- should work in void & overworld (THIS IS MOSTLY UNTESTED CUZ I DONT WANNA GET BANNED BUT STILL WANTED TO MAKE THIS)
+local Pumpkins = workspace.Pumpkins or workspace.pumpkins -- should work in void & overworld (THIS IS MOSTLY UNTESTED CUZ I DONT WANNA GET BANNED BUT STILL WANTED TO MAKE THIS)
 
 function initEspBox(obj)
 	local espbox = Instance.new('BoxHandleAdornment',obj)
