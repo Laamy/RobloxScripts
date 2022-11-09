@@ -1,5 +1,5 @@
 -- configuration
-local colour = Drawing.color(255, 255, 0, 0) -- new instance of solid red
+local colour = Drawing.toHex(255, 255, 0, 0) -- new instance of solid red
 local lines = 200
 
 -- script
